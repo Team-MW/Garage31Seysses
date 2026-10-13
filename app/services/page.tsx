@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
+import { FAQ } from "@/components/FAQ";
 import { PageHero } from "@/components/PageHero";
 import { advantageIcons } from "@/components/Icons";
 import { advantages } from "@/lib/site";
@@ -58,6 +59,7 @@ export default function ServicesPage() {
           <ButtonLink href="/contacts">Prendre rendez-vous</ButtonLink>
         </div>
       </section>
+      <FAQ eyebrow="Questions fréquentes" title="FAQ sur nos prestations mécaniques" />
     </>
   );
 }

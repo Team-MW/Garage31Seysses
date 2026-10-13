@@ -115,29 +115,6 @@ export const advantages = [
   },
 ];
 
-export const gallery = [
-  {
-    src: "/images/audi.jpg",
-    alt: "Audi R8 sur route",
-    position: "center 60%",
-  },
-  {
-    src: "/images/detail.jpg",
-    alt: "Atelier mécanique Garage 31",
-    position: "center",
-  },
-  {
-    src: "/images/p-steer.jpg",
-    alt: "Détail mécanique et finitions",
-    position: "center",
-  },
-  {
-    src: "/images/hero.jpg",
-    alt: "Mercedes-AMG GT",
-    position: "center 70%",
-  },
-];
-
 export const showroom = [
   {
     src: "/images/hero.jpg",

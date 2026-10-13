@@ -1,6 +1,6 @@
 import { ContactSection } from "@/components/ContactSection";
 import { Experience } from "@/components/Experience";
-import { Gallery } from "@/components/Gallery";
+import { FAQ } from "@/components/FAQ";
 import { GarageSection } from "@/components/GarageSection";
 import { GoogleReviews } from "@/components/GoogleReviews";
 import { Hero } from "@/components/Hero";
@@ -16,7 +16,7 @@ export default function HomePage() {
       <Experience />
       <GoogleReviews />
       <GarageSection />
-      <Gallery />
+      <FAQ />
       <ContactSection />
     </>
   );

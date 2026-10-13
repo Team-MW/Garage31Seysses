@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { FAQ } from "@/components/FAQ";
 import { PageHero } from "@/components/PageHero";
 import { Stats } from "@/components/Stats";
 import { site } from "@/lib/site";
@@ -79,6 +80,7 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
+      <FAQ eyebrow="Questions fréquentes" title="Tout savoir sur Garage 31 Seysses" />
     </>
   );
 }

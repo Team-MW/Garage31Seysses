@@ -26,7 +26,8 @@ const columns = [
     links: [
       { href: "/a-propos", label: "Garage indépendant" },
       { href: "/avantages", label: "Ouvert 7j/7" },
-      { href: "/contacts", label: "Avis Google (5★)" },
+      { href: "/#avis", label: "Avis Google (5★)" },
+      { href: "/#faq", label: "Foire Aux Questions" },
       { href: "/confidentialite", label: "Confidentialité" },
     ],
   },

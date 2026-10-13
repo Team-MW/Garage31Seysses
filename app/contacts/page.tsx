@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactSection } from "@/components/ContactSection";
+import { FAQ } from "@/components/FAQ";
 import { GarageSection } from "@/components/GarageSection";
 import { PageHero } from "@/components/PageHero";
 import { site } from "@/lib/site";
@@ -42,6 +43,7 @@ export default function ContactsPage() {
         </div>
       </section>
       <GarageSection />
+      <FAQ eyebrow="Questions fréquentes" title="Questions fréquentes sur les rendez-vous" />
       <ContactSection />
     </>
   );

@@ -7,12 +7,15 @@ import { ShowroomButton } from "./Showroom";
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden lg:min-h-[100svh]">
+      {/* Watermark texte d'arrière-plan */}
       <p
         aria-hidden="true"
         className="pointer-events-none absolute -right-[8%] top-16 z-0 select-none font-display text-[34vw] font-medium leading-[0.8] tracking-[-0.045em] text-white/[0.08] sm:top-8 sm:text-[20vw]"
       >
         GARAGE 31
       </p>
+
+      {/* Lignes graphiques d'ambiance */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute top-40 left-[-8%] z-0 hidden h-px w-[48%] -rotate-6 bg-gradient-to-r from-transparent via-ember to-transparent opacity-80 lg:block"
@@ -21,25 +24,35 @@ export function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute top-52 left-[6%] z-0 hidden h-px w-[28%] -rotate-6 bg-gradient-to-r from-transparent via-ember/70 to-transparent lg:block"
       />
-
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/3 right-[8%] z-0 hidden h-72 w-72 rounded-full bg-ember/20 blur-3xl lg:block"
+        className="pointer-events-none absolute top-1/3 right-[8%] z-0 hidden h-80 w-80 rounded-full bg-ember/20 blur-3xl lg:block"
       />
-      <div className="absolute top-20 right-0 bottom-0 z-[1] hidden w-[62%] lg:block">
+
+      {/* Halo noir diffus sur la gauche pour garantir 100% de lisibilité du texte */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute top-1/4 left-[-15%] z-0 h-[700px] w-[850px] rounded-full bg-ink/80 blur-3xl"
+      />
+
+      {/* Silhouette géante de la voiture qui occupe presque tout le background */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-[15%] sm:-right-[8%] lg:-right-[3%] top-[42%] sm:top-1/2 -translate-y-[40%] sm:-translate-y-1/2 z-0 w-[125vw] sm:w-[96vw] lg:w-[88vw] max-w-[1700px] select-none opacity-45 sm:opacity-50 drop-shadow-[0_30px_90px_rgba(0,0,0,0.98)] filter contrast-125"
+      >
         <Image
-          src="/images/hero.jpg"
-          alt="Garage 31 Seysses mécanique automobile"
-          fill
+          src="/images/vw_golf_bg.png"
+          alt="Volkswagen Golf 7 - Garage 31 Seysses"
+          width={1024}
+          height={536}
           priority
-          sizes="62vw"
-          className="object-cover object-[58%_72%] saturate-[0.8]"
+          sizes="(min-width: 1024px) 88vw, 125vw"
+          className="h-auto w-full object-contain pointer-events-none select-none"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#070708_0%,rgba(7,7,8,0.88)_16%,rgba(7,7,8,0.35)_42%,transparent_68%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-ink to-transparent" />
-        <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-ink to-transparent" />
       </div>
-      <div className="relative z-10 mx-auto w-full max-w-[1180px] px-5 pt-32 pb-8 sm:px-8 sm:pt-40 lg:pb-36">
+
+      {/* Contenu principal du Hero */}
+      <div className="relative z-10 mx-auto w-full max-w-[1180px] px-5 pt-32 pb-16 sm:px-8 sm:pt-40 lg:pb-36">
         <div className="max-w-[620px]">
           <p className="rise text-[11px] font-medium uppercase tracking-[0.32em] text-ember">
             Garage indépendant &bull; Seysses (31) &bull; Ouvert 7j/7
@@ -70,17 +83,6 @@ export function Hero() {
             </ButtonLink>
           </div>
         </div>
-      </div>
-
-      <div className="relative z-10 mx-5 mb-6 aspect-[16/10] overflow-hidden rounded-3xl sm:mx-8 lg:hidden">
-        <Image
-          src="/images/hero.jpg"
-          alt="Garage 31 Seysses mécanique automobile"
-          fill
-          sizes="100vw"
-          className="object-cover object-[center_78%]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" />
       </div>
 
       <div className="relative z-10 flex justify-end px-5 pb-10 sm:px-8 lg:absolute lg:right-[max(2rem,calc((100%-1180px)/2))] lg:bottom-8 lg:px-0 lg:pb-0">
