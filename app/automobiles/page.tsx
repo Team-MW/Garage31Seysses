@@ -14,6 +14,7 @@ export default function AutomobilesPage() {
         eyebrow="Collection"
         title="Automobiles en stock"
         text="Chaque fiche reprend l’état, le kilométrage et les conditions. Filtrez par marque, puis ouvrez le véhicule qui vous intéresse."
+        vehicle="peugeot"
       />
       <section className="py-14 sm:py-16">
         <div className="mx-auto w-full max-w-[1180px] px-5 sm:px-8">

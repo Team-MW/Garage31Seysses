@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { advantageIcons } from "@/components/Icons";
@@ -16,8 +17,22 @@ export default function ServicesPage() {
         eyebrow="Prestations"
         title="Mécanique générale & entretien à Seysses"
         text="Distribution, pompe à eau, kit embrayage, freinage, amortisseurs, diagnostic électronique et révision constructeur. Atelier ouvert 7j/7 au 2 Avenue Pierre Semard."
+        vehicle="peugeot"
       />
-      <section className="py-16 sm:py-20">
+      <section className="relative isolate overflow-hidden py-16 sm:py-20">
+        {/* Silhouette véhicule en fond d'écran */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -left-20 bottom-10 -z-10 select-none w-[380px] sm:w-[580px] lg:w-[720px] opacity-[0.06] sm:opacity-[0.08]"
+        >
+          <Image
+            src="/images/vw_golf_bg.png"
+            alt=""
+            width={1024}
+            height={536}
+            className="h-auto w-full object-contain pointer-events-none select-none filter contrast-125"
+          />
+        </div>
         <div className="mx-auto grid w-full max-w-[1180px] gap-4 px-5 sm:px-8">
           {advantages.map((item, index) => {
             const Icon = advantageIcons[index % advantageIcons.length];

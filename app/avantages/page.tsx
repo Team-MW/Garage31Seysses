@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { advantageIcons } from "@/components/Icons";
@@ -16,8 +17,22 @@ export default function AdvantagesPage() {
         eyebrow="Avantages"
         title="Pourquoi choisir Garage 31 Seysses ?"
         text="Un garage indépendant réactif, ouvert 7j/7, noté 5/5 sur Google avec 45 avis clients, pour l'entretien et la réparation de votre véhicule à Seysses (31)."
+        vehicle="mercedes"
       />
-      <section className="py-16 sm:py-20">
+      <section className="relative isolate overflow-hidden py-16 sm:py-20">
+        {/* Silhouette véhicule en fond d'écran */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -left-20 bottom-8 -z-10 select-none w-[420px] sm:w-[620px] lg:w-[780px] opacity-[0.06] sm:opacity-[0.08]"
+        >
+          <Image
+            src="/images/308_gt_bg.avif"
+            alt=""
+            width={1620}
+            height={1080}
+            className="h-auto w-full object-contain pointer-events-none select-none filter contrast-125"
+          />
+        </div>
         <div className="mx-auto grid w-full max-w-[1180px] gap-4 px-5 sm:px-8 md:grid-cols-2">
           {advantages.map((item, index) => {
             const Icon = advantageIcons[index % advantageIcons.length];

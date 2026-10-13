@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { advantages, site } from "@/lib/site";
 import { advantageIcons } from "./Icons";
@@ -8,7 +9,20 @@ export function Experience() {
   const [open, setOpen] = useState(0);
 
   return (
-    <section id="experience" className="scroll-mt-28 border-t border-white/10 py-20 sm:py-28">
+    <section id="experience" className="relative isolate overflow-hidden scroll-mt-28 border-t border-white/10 py-20 sm:py-28">
+      {/* Silhouette véhicule en fond d'écran */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-20 sm:-left-10 bottom-4 -z-10 select-none w-[380px] sm:w-[580px] lg:w-[720px] opacity-[0.07] sm:opacity-[0.09]"
+      >
+        <Image
+          src="/images/vw_golf_bg.png"
+          alt=""
+          width={1024}
+          height={536}
+          className="h-auto w-full object-contain pointer-events-none select-none filter contrast-125"
+        />
+      </div>
       <div className="mx-auto grid w-full max-w-[1180px] gap-12 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <div>
           <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-ember">Pourquoi Garage 31</p>

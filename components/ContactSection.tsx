@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Suspense } from "react";
 import { site } from "@/lib/site";
 import { IconBadge, IconKey, IconTarget } from "./Icons";
@@ -6,12 +7,25 @@ import { ContactForm } from "./ContactForm";
 const points = [
   { icon: IconTarget, title: "Garage à Seysses (31)", text: "Atelier situé au 2 Avenue Pierre Semard, 31600 Seysses." },
   { icon: IconBadge, title: "Note Google 5 / 5", text: "45 avis clients vérifiés. Travail soigné et pièces certifiées." },
-  { icon: IconKey, title: "Ouvert 7 jours sur 7", text: "Prise en charge souple et rapide pour toutes marques de véhicules." },
+  { icon: IconKey, title: "Ouvert 7j/7 (08:00–19:30)", text: "Accueil du lundi au dimanche sans interruption pour toutes marques." },
 ];
 
 export function ContactSection() {
   return (
-    <section id="contact" className="scroll-mt-28 border-t border-white/10 py-20 sm:py-28">
+    <section id="contact" className="relative isolate overflow-hidden scroll-mt-28 border-t border-white/10 py-20 sm:py-28">
+      {/* Silhouette véhicule en fond d'écran */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-16 bottom-0 -z-10 select-none w-[340px] sm:w-[500px] lg:w-[620px] opacity-[0.08] sm:opacity-[0.10]"
+      >
+        <Image
+          src="/images/mercedes_bg.webp"
+          alt=""
+          width={600}
+          height={400}
+          className="h-auto w-full object-contain pointer-events-none select-none filter contrast-125"
+        />
+      </div>
       <div className="mx-auto grid w-full max-w-[1180px] gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div>
           <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-ember">Contact & Devis</p>

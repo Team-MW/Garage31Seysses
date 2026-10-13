@@ -8,10 +8,59 @@ export const site = {
   postalCode: "31600",
   city: "Seysses",
   fullAddress: "2 Avenue Pierre Semard, 31600 Seysses",
-  hours: "Ouvert 7j/7",
+  hours: "Ouvert 7j/7 • 08:00–19:30",
+  schedule: "Du lundi au dimanche de 08:00 à 19:30 sans interruption",
   rating: "5/5",
   reviewsCount: 45,
+  whatsapp: "07 43 32 33 43",
+  whatsappHref: "https://wa.me/33743323343?text=Bonjour%20Garage%2031%2C%20je%20souhaite%20un%20renseignement%20ou%20un%20devis.",
+  googleMapsUrl: "https://www.google.com/maps/place//data=!4m2!3m1!1s0x12aeb7083b5a85ff:0xa92ff0550ffa7f45?sa=X&ved=1t:8290&ictx=111",
+  googleReviewUrl: "https://www.google.com/search?q=GARAGE+31+SEYSSES#lrd=0x12aeb7083b5a85ff:0xa92ff0550ffa7f45,3,,,",
 };
+
+export const googleReviews = [
+  {
+    name: "Mina",
+    initial: "M",
+    avatarBg: "bg-[#673ab7]",
+    starBadge: true,
+    time: "il y a 3 heures",
+    rating: 5,
+    badge: "Nouveau",
+    text: "Super Garage, de confiance au top\nRien à dire ...",
+    visited: "Visité en octobre",
+  },
+  {
+    name: "Salman Youssoupov",
+    initial: "S",
+    avatarBg: "bg-[#e65100]",
+    time: "il y a 6 jours",
+    rating: 5,
+    badge: "Nouveau",
+    text: "Très bon garage, avec un excellent service, une équipe professionnelle et un accueil chaleureux !",
+    visited: "Visité en octobre",
+  },
+  {
+    name: "Мохмад",
+    initial: "М",
+    avatarBg: "bg-[#202124]",
+    time: "il y a une semaine",
+    rating: 5,
+    badge: "Nouveau",
+    text: "Très satisfait de l’intervention. Le garage m’a remplacé un triangle ainsi que les deux amortisseurs arrière de mon véhicule. Travail sérieux, rapide et ...",
+    visited: "Visité en octobre",
+  },
+  {
+    name: "amina 3lot",
+    initial: "a",
+    avatarBg: "bg-[#b71c1c]",
+    time: "il y a une semaine",
+    rating: 5,
+    badge: "Nouveau",
+    text: "Très bon garage, équipe sympa et professionnelle. Travail sérieux et rapide, je suis très satisfait de la réparation. Je recommande !",
+    visited: "Visité en octobre",
+  },
+];
 
 export const nav = [
   { href: "/services", label: "Prestations" },
@@ -29,7 +78,7 @@ export const stats = [
   {
     value: "7j/7",
     label: "Ouverture",
-    text: "Ouvert 7 jours sur 7 pour l'entretien et vos réparations.",
+    text: "De 08:00 à 19:30 du lundi au dimanche sans interruption.",
   },
   {
     value: "31",

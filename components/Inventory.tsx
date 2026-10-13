@@ -34,7 +34,20 @@ export const prestations = [
 
 export function Inventory() {
   return (
-    <section id="prestations" className="scroll-mt-28 py-20 sm:py-28">
+    <section id="prestations" className="relative isolate overflow-hidden scroll-mt-28 py-20 sm:py-28">
+      {/* Silhouette véhicule en fond d'écran */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-20 top-8 -z-10 select-none w-[420px] sm:w-[620px] lg:w-[780px] opacity-[0.07] sm:opacity-[0.09]"
+      >
+        <Image
+          src="/images/308_gt_bg.avif"
+          alt=""
+          width={1620}
+          height={1080}
+          className="h-auto w-full object-contain pointer-events-none select-none filter contrast-125"
+        />
+      </div>
       <div className="mx-auto w-full max-w-[1180px] px-5 sm:px-8">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
           <div>

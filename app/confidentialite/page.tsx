@@ -14,6 +14,7 @@ export default function PrivacyPage() {
         eyebrow="Légal"
         title="Politique de confidentialité"
         text="Les informations du formulaire servent uniquement à vous recontacter au sujet d'une prestation mécanique ou d'un devis."
+        vehicle="golf"
       />
       <section className="py-16">
         <div className="mx-auto max-w-3xl space-y-6 px-5 text-sm leading-7 text-mist sm:px-8">

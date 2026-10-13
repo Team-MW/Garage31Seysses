@@ -67,6 +67,16 @@ export function Footer() {
               </a>
             </li>
             <li>
+              <a
+                href={site.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 font-medium text-[#25D366] transition hover:text-white"
+              >
+                WhatsApp : {site.phone}
+              </a>
+            </li>
+            <li>
               <a href={`mailto:${site.email}`} className="transition hover:text-white">
                 {site.email}
               </a>

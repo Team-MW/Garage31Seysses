@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactSection } from "@/components/ContactSection";
+import { GarageSection } from "@/components/GarageSection";
 import { PageHero } from "@/components/PageHero";
 import { site } from "@/lib/site";
 
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 const cards = [
   { label: "Téléphone", value: site.phone, href: site.phoneHref },
-  { label: "E-mail", value: site.email, href: `mailto:${site.email}` },
+  { label: "WhatsApp (7j/7)", value: site.whatsapp, href: site.whatsappHref },
   { label: "Adresse", value: site.fullAddress },
   { label: "Horaires", value: site.hours },
 ];
@@ -22,6 +23,7 @@ export default function ContactsPage() {
         eyebrow="Contact"
         title="Contacter le Garage 31"
         text="Une question, une estimation ou un rendez-vous à l'atelier ? L'équipe vous répond 7 jours sur 7 au 07 43 32 33 43."
+        vehicle="mercedes"
       />
       <section className="border-b border-white/10">
         <div className="mx-auto grid w-full max-w-[1180px] gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
@@ -39,6 +41,7 @@ export default function ContactsPage() {
           ))}
         </div>
       </section>
+      <GarageSection />
       <ContactSection />
     </>
   );

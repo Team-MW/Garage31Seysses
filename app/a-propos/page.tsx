@@ -31,6 +31,7 @@ export default function AboutPage() {
         eyebrow="Garage 31 Seysses"
         title="Un garage indépendant qui se développe"
         text="Implanté à Seysses, Garage 31 réunit savoir-faire mécanique, équipement moderne et sens du service au quotidien."
+        vehicle="golf"
       />
       <section className="py-16 sm:py-20">
         <div className="mx-auto grid w-full max-w-[1180px] items-center gap-10 px-5 sm:px-8 lg:grid-cols-2">
@@ -55,7 +56,20 @@ export default function AboutPage() {
         </div>
       </section>
       <Stats />
-      <section className="py-16 sm:py-20">
+      <section className="relative isolate overflow-hidden py-16 sm:py-20">
+        {/* Silhouette véhicule en fond d'écran */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-20 bottom-4 -z-10 select-none w-[340px] sm:w-[520px] lg:w-[650px] opacity-[0.06] sm:opacity-[0.08]"
+        >
+          <Image
+            src="/images/mercedes_bg.webp"
+            alt=""
+            width={600}
+            height={400}
+            className="h-auto w-full object-contain pointer-events-none select-none filter contrast-125"
+          />
+        </div>
         <div className="mx-auto grid w-full max-w-[1180px] gap-4 px-5 sm:px-8 md:grid-cols-3">
           {values.map((value) => (
             <article key={value.title} className="rounded-3xl border border-white/10 p-6">
