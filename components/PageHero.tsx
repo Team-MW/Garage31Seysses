@@ -35,10 +35,10 @@ export function PageHero({
   const v = vehicleConfig[vehicle] || vehicleConfig.golf;
 
   return (
-    <section className="relative overflow-hidden border-b border-white/10 pt-32 pb-14 sm:pt-40 sm:pb-16">
+    <section className="relative overflow-hidden border-b border-white/10 pt-32 pb-14 sm:pt-40 sm:pb-16 bg-[#08070c]">
       <p
         aria-hidden="true"
-        className="pointer-events-none absolute -right-6 top-16 select-none font-display text-[22vw] font-medium leading-none text-white/[0.04]"
+        className="pointer-events-none absolute -right-6 top-16 select-none font-display text-[22vw] font-medium leading-none text-purple-900/[0.10]"
       >
         GARAGE 31
       </p>
@@ -59,8 +59,8 @@ export function PageHero({
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1180px] px-5 sm:px-8">
-        <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-ember">{eyebrow}</p>
-        <h1 className="mt-4 max-w-3xl font-display text-5xl uppercase leading-[0.92] tracking-wide sm:text-6xl">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-purple-400">{eyebrow}</p>
+        <h1 className="mt-4 max-w-3xl font-display text-5xl uppercase leading-[0.92] tracking-wide sm:text-6xl text-white">
           {title}
         </h1>
         <p className="mt-5 max-w-xl text-sm leading-7 text-mist sm:text-base">{text}</p>

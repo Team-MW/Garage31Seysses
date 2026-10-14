@@ -3,10 +3,15 @@
 @theme inline {
   --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-oswald), Impact, sans-serif;
-  --color-ink: #070708;
-  --color-panel: #101012;
-  --color-ember: #ff4d1a;
-  --color-ember-bright: #ff7348;
+  --color-ink: #08070c;
+  --color-panel: #100d18;
+  --color-panel-card: #151121;
+  --color-ember: #a855f7;
+  --color-ember-bright: #c084fc;
+  --color-violet: #a855f7;
+  --color-violet-bright: #c084fc;
+  --color-violet-deep: #7c3aed;
+  --color-violet-dark: #581c87;
   --color-mist: #a1a1aa;
 }
 
@@ -16,18 +21,21 @@ html {
 
 body {
   background:
-    radial-gradient(900px 420px at 85% -10%, rgba(255, 77, 26, 0.14), transparent 60%),
-    #070708;
+    radial-gradient(900px 450px at 85% -10%, rgba(168, 85, 247, 0.18), transparent 60%),
+    radial-gradient(750px 380px at 10% 35%, rgba(124, 58, 237, 0.12), transparent 55%),
+    radial-gradient(600px 300px at 80% 80%, rgba(168, 85, 247, 0.08), transparent 50%),
+    #08070c;
   color: white;
+  min-height: 100vh;
 }
 
 ::selection {
-  background: #ff4d1a;
+  background: #a855f7;
   color: white;
 }
 
 :focus-visible {
-  outline: 2px solid #ff4d1a;
+  outline: 2px solid #a855f7;
   outline-offset: 3px;
 }
 
@@ -37,12 +45,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #070708;
+  background: #08070c;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2c2c31;
+  background: #272138;
   border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
 }
 
 @keyframes rise {
@@ -70,6 +82,19 @@ body {
 
 .rise-4 {
   animation-delay: 0.3s;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(192, 132, 252, 0.6);
+  }
+}
+
+.glow-violet {
+  animation: pulseGlow 3s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

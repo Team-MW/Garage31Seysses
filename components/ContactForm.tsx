@@ -8,7 +8,7 @@ import { IconArrow } from "./Icons";
 type Errors = Partial<Record<"name" | "phone" | "consent", string>>;
 
 const fieldClass =
-  "w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3.5 text-sm outline-none transition placeholder:text-white/30 focus:border-ember/80";
+  "w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-purple-500 focus:ring-1 focus:ring-purple-500";
 
 export function ContactForm() {
   const [name, setName] = useState("");
@@ -38,15 +38,15 @@ export function ContactForm() {
 
   if (sent) {
     return (
-      <div className="rounded-3xl border border-white/10 bg-panel p-8" role="status">
-        <p className="text-[11px] uppercase tracking-[0.24em] text-ember">Demande reçue</p>
-        <h3 className="mt-3 font-display text-4xl uppercase tracking-wide">Merci, {name.trim().split(" ")[0]}.</h3>
+      <div className="rounded-3xl border border-purple-500/30 bg-[#110e1a] p-8 shadow-xl" role="status">
+        <p className="text-[11px] uppercase tracking-[0.24em] text-purple-400 font-semibold">Demande reçue</p>
+        <h3 className="mt-3 font-display text-4xl uppercase tracking-wide text-white">Merci, {name.trim().split(" ")[0]}.</h3>
         <p className="mt-4 text-sm leading-6 text-mist">
-          L&apos;équipe du Garage 31 vous rappelle dans les plus brefs délais pour convenir de votre rendez-vous.
+          L&apos;équipe du Garage 31 vous rappelle dans les plus brefs délais pour répondre à votre demande.
         </p>
         <button
           type="button"
-          className="mt-6 text-sm text-white underline decoration-white/30 underline-offset-4"
+          className="mt-6 text-sm text-purple-300 underline decoration-purple-400/40 underline-offset-4 hover:text-white"
           onClick={() => {
             setSent(false);
             setName("");
@@ -64,7 +64,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} noValidate className="rounded-3xl border border-white/10 bg-panel p-5 sm:p-7">
+    <form onSubmit={onSubmit} noValidate className="rounded-3xl border border-white/10 bg-[#110e1a] p-5 sm:p-7 shadow-xl">
       <div className="grid gap-3 sm:grid-cols-2">
         <label className="block">
           <span className="sr-only">Votre nom</span>
@@ -76,7 +76,7 @@ export function ContactForm() {
             className={fieldClass}
             aria-invalid={Boolean(errors.name)}
           />
-          {errors.name ? <span className="mt-1 block text-xs text-ember">{errors.name}</span> : null}
+          {errors.name ? <span className="mt-1 block text-xs text-purple-400">{errors.name}</span> : null}
         </label>
         <label className="block">
           <span className="sr-only">Votre téléphone</span>
@@ -89,7 +89,7 @@ export function ContactForm() {
             className={fieldClass}
             aria-invalid={Boolean(errors.phone)}
           />
-          {errors.phone ? <span className="mt-1 block text-xs text-ember">{errors.phone}</span> : null}
+          {errors.phone ? <span className="mt-1 block text-xs text-purple-400">{errors.phone}</span> : null}
         </label>
         <label className="block">
           <span className="sr-only">Véhicule</span>
@@ -105,7 +105,7 @@ export function ContactForm() {
           <input
             value={city}
             onChange={(event) => setCity(event.target.value)}
-            placeholder="Ville (Seysses, Muret…)"
+            placeholder="Ville (Seysses, Muret, Toulouse…)"
             className={fieldClass}
           />
         </label>
@@ -116,7 +116,7 @@ export function ContactForm() {
         <textarea
           value={message}
           onChange={(event) => setMessage(event.target.value)}
-          placeholder="Prestation souhaitée (vidange, courroie, embrayage, diagnostic…)"
+          placeholder="Prestation souhaitée (vidange, distribution, amortisseurs, diagnostic, pneumatiques, climatisation, lustrage, vitres teintées, pare-brise...)"
           rows={4}
           className={`${fieldClass} resize-none`}
         />
@@ -124,7 +124,7 @@ export function ContactForm() {
 
       <button
         type="submit"
-        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-ember px-5 py-3.5 text-sm font-medium text-white transition hover:bg-ember-bright"
+        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-600 px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-purple-900/40 transition hover:from-purple-500 hover:to-fuchsia-500 active:scale-95"
       >
         Envoyer la demande
         <IconArrow className="h-4 w-4" />
@@ -135,15 +135,15 @@ export function ContactForm() {
           type="checkbox"
           checked={consent}
           onChange={(event) => setConsent(event.target.checked)}
-          className="mt-0.5 h-4 w-4 accent-ember"
+          className="mt-0.5 h-4 w-4 accent-purple-600"
         />
         <span>
           En envoyant ce formulaire, vous acceptez la{" "}
-          <Link href="/confidentialite" className="text-white underline decoration-white/30 underline-offset-2">
+          <Link href="/confidentialite" className="text-white underline decoration-white/30 underline-offset-2 hover:text-purple-300">
             politique de confidentialité
           </Link>
           .
-          {errors.consent ? <span className="mt-1 block text-ember">{errors.consent}</span> : null}
+          {errors.consent ? <span className="mt-1 block text-purple-400">{errors.consent}</span> : null}
         </span>
       </label>
     </form>

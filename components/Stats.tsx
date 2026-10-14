@@ -2,7 +2,7 @@ import { stats } from "@/lib/site";
 
 export function Stats() {
   return (
-    <section className="border-y border-white/10" aria-label="Chiffres">
+    <section className="border-y border-white/10 bg-[#09070f]" aria-label="Chiffres clés">
       <div className="mx-auto grid w-full max-w-[1180px] grid-cols-2 lg:grid-cols-4">
         {stats.map((stat, index) => (
           <article
@@ -13,9 +13,15 @@ export function Stats() {
               index !== stats.length - 1 ? "lg:border-r lg:border-white/10" : ""
             }`}
           >
-            <p className="font-display text-5xl font-medium text-ember sm:text-6xl">{stat.value}</p>
-            <h2 className="mt-3 text-sm font-medium uppercase tracking-[0.14em]">{stat.label}</h2>
-            <p className="mt-2 max-w-[220px] text-sm leading-5 text-mist">{stat.text}</p>
+            <p className="font-display text-5xl font-extrabold bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent sm:text-6xl">
+              {stat.value}
+            </p>
+            <h2 className="mt-3 text-sm font-semibold uppercase tracking-[0.14em] text-white">
+              {stat.label}
+            </h2>
+            <p className="mt-2 max-w-[220px] text-xs sm:text-sm leading-5 text-mist">
+              {stat.text}
+            </p>
           </article>
         ))}
       </div>

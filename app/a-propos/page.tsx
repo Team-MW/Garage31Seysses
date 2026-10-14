@@ -6,22 +6,22 @@ import { Stats } from "@/components/Stats";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "À propos",
-  description: "Garage 31 Seysses, garage indépendant de mécanique automobile au 2 Avenue Pierre Semard, 31600 Seysses.",
+  title: "À propos • Garage 31 Seysses",
+  description: "Garage 31 Seysses, atelier indépendant de mécanique automobile au 2 Avenue Pierre Semard, 31600 Seysses. « Service rapide & efficace » 7j/7.",
 };
 
 const values = [
   {
-    title: "Garage indépendant de proximité",
-    text: "Un garage à taille humaine, réactif et transparent. Nous vous expliquons chaque opération avec clarté et sans devis abusif.",
+    title: "Service rapide & efficace",
+    text: "Notre devise au quotidien : un accueil sans perte de temps, des diagnostics immédiats et des forfaits atelier transparents (dès 99 € la vidange).",
   },
   {
-    title: "Pièces certifiées & travail soigné",
-    text: "Toutes les interventions sont réalisées avec des pièces de qualité d'origine pour préserver la durée de vie et la garantie de votre véhicule.",
+    title: "Pièces certifiées & travail garanti",
+    text: "Toutes les interventions (distribution 494,99 €, amortisseurs 159 €, vidange 3 filtres 159 € TTC) sont réalisées avec des pièces de qualité équipementier d'origine.",
   },
   {
     title: "Ouvert 7 jours sur 7",
-    text: "Une disponibilité rare dans le secteur pour vous permettre d'entretenir votre voiture en semaine comme le week-end.",
+    text: "Du lundi au dimanche de 8h à 19h30 sans interruption. Une flexibilité totale pour entretenir ou réparer votre véhicule selon votre emploi du temps.",
   },
 ];
 
@@ -29,14 +29,14 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="Garage 31 Seysses"
-        title="Un garage indépendant qui se développe"
-        text="Implanté à Seysses, Garage 31 réunit savoir-faire mécanique, équipement moderne et sens du service au quotidien."
+        eyebrow="Garage 31 Seysses • Notre Histoire"
+        title="Un garage indépendant réactif & transparent"
+        text="Implanté au 2 Avenue Pierre Semard à Seysses, Garage 31 réunit savoir-faire mécanique, équipement de pointe et sens du service au quotidien."
         vehicle="golf"
       />
       <section className="py-16 sm:py-20">
         <div className="mx-auto grid w-full max-w-[1180px] items-center gap-10 px-5 sm:px-8 lg:grid-cols-2">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-purple-500/30 shadow-xl shadow-purple-950/40">
             <Image
               src="/images/hero.jpg"
               alt="Garage 31 Seysses atelier"
@@ -46,12 +46,17 @@ export default function AboutPage() {
             />
           </div>
           <div>
-            <h2 className="font-display text-4xl uppercase leading-[0.95]">Seysses & Agglomération (31)</h2>
+            <span className="inline-block rounded-full bg-purple-500/20 px-3 py-1 text-xs font-semibold text-purple-300">
+              « {site.slogan} »
+            </span>
+            <h2 className="mt-3 font-display text-4xl uppercase leading-[0.95] text-white">
+              Seysses & Agglomération Toulousaine (31)
+            </h2>
             <p className="mt-5 text-sm leading-7 text-mist sm:text-base">
-              Situé au {site.fullAddress}, Garage 31 est un garage indépendant de mécanique automobile en plein essor. Nous prenons en charge l&apos;entretien périodique, la mécanique lourde (courroie de distribution, pompe à eau, kit embrayage, freinage, amortisseurs) ainsi que le diagnostic électronique toutes marques.
+              Situé au {site.fullAddress}, Garage 31 est un garage indépendant de mécanique automobile en plein essor. Nous prenons en charge l&apos;ensemble des 9 prestations enseigne : vidange, diagnostic, pneumatiques, freinage, climatisation, nettoyage, lustrage, vitres teintées et pare-brise, ainsi que la mécanique lourde (courroie de distribution, amortisseurs, embrayage).
             </p>
             <p className="mt-4 text-sm leading-7 text-mist sm:text-base">
-              {site.hours}. Un appel au {site.phone} suffit pour caler votre passage à l&apos;atelier.
+              {site.hours}. Réservez votre créneau en ligne ou contactez-nous directement au {site.phone}.
             </p>
           </div>
         </div>
@@ -73,8 +78,8 @@ export default function AboutPage() {
         </div>
         <div className="mx-auto grid w-full max-w-[1180px] gap-4 px-5 sm:px-8 md:grid-cols-3">
           {values.map((value) => (
-            <article key={value.title} className="rounded-3xl border border-white/10 p-6">
-              <h3 className="font-display text-2xl uppercase tracking-wide">{value.title}</h3>
+            <article key={value.title} className="rounded-3xl border border-white/10 bg-[#110e1a] p-6 hover:border-purple-500/40 transition">
+              <h3 className="font-display text-2xl uppercase tracking-wide text-white">{value.title}</h3>
               <p className="mt-3 text-sm leading-6 text-mist">{value.text}</p>
             </article>
           ))}
