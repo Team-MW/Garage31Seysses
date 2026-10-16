@@ -7,8 +7,8 @@ const columns = [
     title: "Navigation",
     links: [
       { href: "/services", label: "Prestations" },
-      { href: "/#tarifs", label: "Tarifs & Forfaits" },
-      { href: "/#rendez-vous", label: "Prendre RDV en ligne" },
+      { href: "/tarifs", label: "Tarifs & Forfaits" },
+      { href: "/rendez-vous", label: "Prendre RDV en ligne" },
       { href: "/a-propos", label: "À propos" },
       { href: "/avantages", label: "Avantages" },
       { href: "/contacts", label: "Contact" },
@@ -31,11 +31,11 @@ const columns = [
   {
     title: "Tarifs Forfaits",
     links: [
-      { href: "/#tarifs", label: "Vidange simple : 99 €" },
-      { href: "/#tarifs", label: "Vidange 3 filtres : 159 € TTC" },
-      { href: "/#tarifs", label: "Distribution : 494,99 €" },
-      { href: "/#tarifs", label: "Amortisseurs : 159 €" },
-      { href: "/#avis", label: "Avis Clients (5★)" },
+      { href: "/tarifs#vidange-simple", label: "Vidange simple : 99 €" },
+      { href: "/tarifs#vidange-3-filtres", label: "Vidange 3 filtres : 159 € TTC" },
+      { href: "/tarifs#courroie-distribution", label: "Distribution : 494,99 €" },
+      { href: "/tarifs#changement-amortisseurs", label: "Amortisseurs : 159 €" },
+      { href: "/rendez-vous", label: "Prendre RDV (7j/7)" },
       { href: "/confidentialite", label: "Confidentialité" },
     ],
   },
@@ -46,7 +46,7 @@ export function Footer() {
     <footer className="border-t border-purple-500/20 bg-[#07060a]">
       <div className="mx-auto grid w-full max-w-[1180px] gap-12 px-5 py-16 sm:px-8 md:grid-cols-[1.3fr_1fr_1.1fr_1fr_1.2fr]">
         <div>
-          <Logo showSlogan />
+          <Logo />
           <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-purple-400">
             « {site.slogan} »
           </p>

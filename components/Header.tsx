@@ -49,7 +49,7 @@ export function Header() {
         }`}
       >
         <div className="mx-auto flex h-[82px] w-full max-w-[1180px] items-center justify-between px-5 sm:px-8">
-          <Logo showSlogan />
+          <Logo />
 
           <nav className="hidden items-center gap-6 lg:flex" aria-label="Navigation principale">
             {nav.map((item) => {
@@ -78,7 +78,7 @@ export function Header() {
               {site.phone}
             </a>
             <Link
-              href="/#rendez-vous"
+              href="/rendez-vous"
               className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-600 px-4 py-2 text-xs font-semibold text-white shadow-md shadow-purple-900/40 transition hover:from-purple-500 hover:to-fuchsia-500 active:scale-95"
             >
               <IconCalendar className="h-3.5 w-3.5" />
@@ -150,7 +150,7 @@ export function Header() {
             {/* Actions rapides mobile */}
             <div className="mt-6 flex flex-col gap-3">
               <Link
-                href="/#rendez-vous"
+                href="/rendez-vous"
                 onClick={() => setOpen(false)}
                 className="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-600 px-5 py-3.5 text-base font-semibold text-white shadow-lg shadow-purple-900/40 transition active:scale-95"
               >

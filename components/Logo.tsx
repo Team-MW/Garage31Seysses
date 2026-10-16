@@ -85,11 +85,6 @@ export function Logo({ showSlogan = false, className = "" }: LogoProps) {
           <span className="block text-[8.5px] font-medium tracking-[0.34em] text-purple-200/60 uppercase">
             31600 Haute-Garonne
           </span>
-          {showSlogan && (
-            <span className="hidden text-[9px] font-medium text-purple-400/90 md:inline">
-              • {site.slogan}
-            </span>
-          )}
         </div>
       </div>
     </Link>

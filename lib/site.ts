@@ -139,8 +139,8 @@ export const googleReviews = [
 
 export const nav = [
   { href: "/services", label: "Prestations" },
-  { href: "/#tarifs", label: "Tarifs" },
-  { href: "/#rendez-vous", label: "Prendre RDV" },
+  { href: "/tarifs", label: "Tarifs" },
+  { href: "/rendez-vous", label: "Prendre RDV" },
   { href: "/a-propos", label: "À propos" },
   { href: "/avantages", label: "Avantages" },
   { href: "/contacts", label: "Contact" },

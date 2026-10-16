@@ -51,7 +51,7 @@ export default function AdvantagesPage() {
         </div>
         <div className="mx-auto mt-10 flex w-full max-w-[1180px] flex-wrap items-center gap-3 px-5 sm:px-8">
           <Link
-            href="/#rendez-vous"
+            href="/rendez-vous"
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-purple-900/40 transition hover:from-purple-500 hover:to-fuchsia-500"
           >
             <IconCalendar className="h-4 w-4" />
@@ -60,7 +60,7 @@ export default function AdvantagesPage() {
           <ButtonLink href="/services" variant="ghost">
             Voir les 9 prestations
           </ButtonLink>
-          <ButtonLink href="/#tarifs" variant="ghost">
+          <ButtonLink href="/tarifs" variant="ghost">
             Consulter nos forfaits
           </ButtonLink>
         </div>

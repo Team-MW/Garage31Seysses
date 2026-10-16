@@ -1,25 +1,15 @@
 "use client";
 
+import Link from "next/link";
 import { pricingPlans, site } from "../lib/site";
 import { IconArrow, IconPhone } from "./Icons";
 
 interface PricingSectionProps {
   onSelectPlan?: (planTitle: string) => void;
+  showAllTarifsLink?: boolean;
 }
 
-export function PricingSection({ onSelectPlan }: PricingSectionProps) {
-  const handleSelect = (planTitle: string) => {
-    if (onSelectPlan) {
-      onSelectPlan(planTitle);
-    } else {
-      const rdvSection = document.getElementById("rendez-vous");
-      if (rdvSection) {
-        rdvSection.scrollIntoView({ behavior: "smooth" });
-        const event = new CustomEvent("select-service-booking", { detail: { service: planTitle } });
-        window.dispatchEvent(event);
-      }
-    }
-  };
+export function PricingSection({ onSelectPlan, showAllTarifsLink }: PricingSectionProps) {
 
   return (
     <section id="tarifs" className="relative isolate overflow-hidden scroll-mt-24 py-20 sm:py-28">
@@ -106,18 +96,32 @@ export function PricingSection({ onSelectPlan }: PricingSectionProps) {
 
                 {/* Bouton de réservation directe */}
                 <div className="mt-8 pt-4 border-t border-white/10">
-                  <button
-                    type="button"
-                    onClick={() => handleSelect(plan.title)}
-                    className={`flex w-full items-center justify-center gap-2 rounded-xl py-3 px-4 text-xs font-semibold transition active:scale-95 ${
-                      isFeatured
-                        ? "bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white hover:from-purple-500 hover:to-fuchsia-500 shadow-lg shadow-purple-900/40"
-                        : "border border-purple-500/30 bg-purple-950/40 text-purple-200 hover:border-purple-400 hover:bg-purple-900/50"
-                    }`}
-                  >
-                    <span>Réserver ce forfait</span>
-                    <IconArrow className="h-3.5 w-3.5" />
-                  </button>
+                  {onSelectPlan ? (
+                    <button
+                      type="button"
+                      onClick={() => onSelectPlan(plan.title)}
+                      className={`flex w-full items-center justify-center gap-2 rounded-xl py-3 px-4 text-xs font-semibold transition active:scale-95 ${
+                        isFeatured
+                          ? "bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white hover:from-purple-500 hover:to-fuchsia-500 shadow-lg shadow-purple-900/40"
+                          : "border border-purple-500/30 bg-purple-950/40 text-purple-200 hover:border-purple-400 hover:bg-purple-900/50"
+                      }`}
+                    >
+                      <span>Réserver ce forfait</span>
+                      <IconArrow className="h-3.5 w-3.5" />
+                    </button>
+                  ) : (
+                    <Link
+                      href="/rendez-vous"
+                      className={`flex w-full items-center justify-center gap-2 rounded-xl py-3 px-4 text-xs font-semibold transition active:scale-95 ${
+                        isFeatured
+                          ? "bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white hover:from-purple-500 hover:to-fuchsia-500 shadow-lg shadow-purple-900/40"
+                          : "border border-purple-500/30 bg-purple-950/40 text-purple-200 hover:border-purple-400 hover:bg-purple-900/50"
+                      }`}
+                    >
+                      <span>Réserver ce forfait</span>
+                      <IconArrow className="h-3.5 w-3.5" />
+                    </Link>
+                  )}
                 </div>
               </div>
             );

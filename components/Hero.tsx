@@ -16,15 +16,7 @@ export function Hero() {
         GARAGE 31
       </p>
 
-      {/* Lignes graphiques d'ambiance violettes */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute top-40 left-[-8%] z-0 hidden h-px w-[48%] -rotate-6 bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-80 lg:block"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute top-52 left-[6%] z-0 hidden h-px w-[28%] -rotate-6 bg-gradient-to-r from-transparent via-fuchsia-500/70 to-transparent lg:block"
-      />
+      {/* Halo violet doux d'ambiance */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute top-1/3 right-[8%] z-0 hidden h-80 w-80 rounded-full bg-purple-600/20 blur-3xl lg:block"
@@ -55,15 +47,8 @@ export function Hero() {
       {/* Contenu principal du Hero */}
       <div className="relative z-10 mx-auto w-full max-w-[1180px] px-5 pt-32 pb-16 sm:px-8 sm:pt-40 lg:pb-36">
         <div className="max-w-[650px]">
-          {/* Badge Slogan Enseigne */}
-          <div className="rise inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-950/40 px-3.5 py-1.5 backdrop-blur">
-            <span className="h-2 w-2 rounded-full bg-purple-400 animate-ping" />
-            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-purple-300">
-              « {site.slogan} » • Ouvert 7j/7
-            </p>
-          </div>
 
-          <h1 className="rise rise-2 mt-5 font-display text-[42px] font-medium uppercase leading-[0.9] tracking-[0.01em] sm:text-6xl lg:text-[70px]">
+          <h1 className="rise mt-1 font-display text-[42px] font-medium uppercase leading-[0.9] tracking-[0.01em] sm:text-6xl lg:text-[72px]">
             Mécanique auto
             <br />
             & entretien
@@ -82,7 +67,7 @@ export function Hero() {
           {/* Boutons d'action */}
           <div className="rise rise-4 mt-8 flex flex-wrap items-center gap-3">
             <Link
-              href="/#rendez-vous"
+              href="/rendez-vous"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 via-purple-700 to-fuchsia-600 px-6 py-3.5 text-sm font-semibold text-white shadow-xl shadow-purple-900/40 transition hover:from-purple-500 hover:to-fuchsia-500 active:scale-95"
             >
               <IconCalendar className="h-4 w-4" />
@@ -95,7 +80,7 @@ export function Hero() {
               <IconPhone className="h-4 w-4 text-purple-400" />
               {site.phone}
             </a>
-            <ButtonLink href="/#tarifs" variant="ghost">
+            <ButtonLink href="/tarifs" variant="ghost">
               Voir nos tarifs fixes
             </ButtonLink>
           </div>

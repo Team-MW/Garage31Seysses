@@ -1,0 +1,255 @@
+/* ==========================================================================
+   GARAGE 31 SEYSSES - THÈME JOTFORM OFFICIEL (EXACT BACKGROUND DU SITE)
+   Formulaire ID: 262884010548055
+   À copier-coller dans Jotform : Form Designer > Styles > Inject Custom CSS
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* FOND GÉNÉRAL DU SITE (Exactement #08070c avec halos violets) */
+.supernova,
+body.supernova,
+html.supernova,
+body,
+html {
+  background:
+    radial-gradient(900px 450px at 85% -10%, rgba(168, 85, 247, 0.18), transparent 60%),
+    radial-gradient(750px 380px at 10% 35%, rgba(124, 58, 237, 0.12), transparent 55%),
+    #08070c !important;
+  background-color: #08070c !important;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+  color: #ffffff !important;
+  min-height: 100vh !important;
+}
+
+/* CARTE DU FORMULAIRE (Fond #100d18 identique aux panneaux du site) */
+.form-all {
+  background: #100d18 !important;
+  background-color: #100d18 !important;
+  border: 1px solid rgba(168, 85, 247, 0.35) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 25px 60px -15px rgba(88, 28, 135, 0.5), 0 0 35px rgba(168, 85, 247, 0.12) !important;
+  color: #f1f5f9 !important;
+  max-width: 720px !important;
+  padding: 16px 20px !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+/* Section principale */
+.form-section.page-section {
+  padding: 16px 24px 28px 24px !important;
+  background: transparent !important;
+}
+
+/* En-tête du formulaire */
+.form-header-group.header-large.heading-long-border.new-header-group,
+.form-header-group {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.25) !important;
+  padding: 16px 0 22px 0 !important;
+  margin-bottom: 18px !important;
+  text-align: left !important;
+}
+
+/* Titre principal */
+.form-header {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.15 !important;
+  margin-bottom: 6px !important;
+}
+
+/* Sous-titre de l'en-tête */
+.form-subHeader {
+  color: #cbd5e1 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  font-weight: 400 !important;
+  opacity: 0.85 !important;
+}
+
+/* Lignes de formulaire & champs requis */
+.form-line {
+  padding: 14px 4px !important;
+  background: transparent !important;
+  transition: all 0.2s ease !important;
+}
+
+.form-line.jf-required {
+  margin-bottom: 6px !important;
+}
+
+.form-line-active {
+  background-color: rgba(168, 85, 247, 0.06) !important;
+  border-radius: 12px !important;
+}
+
+/* Libellés des champs (Labels) */
+.form-label,
+.form-label.form-label-top,
+.form-label.form-label-auto {
+  color: #ffffff !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  margin-bottom: 8px !important;
+}
+
+/* Astérisque obligatoire */
+.form-required {
+  color: #ec4899 !important;
+  font-weight: 800 !important;
+  margin-left: 4px !important;
+}
+
+/* Conteneurs de sous-libellés */
+.form-sub-label-container {
+  margin-top: 4px !important;
+  width: 100% !important;
+}
+
+/* Sous-libellés (Prénom, Nom, exemple@...) */
+.form-sub-label {
+  color: #c084fc !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  margin-top: 5px !important;
+  display: block !important;
+  letter-spacing: 0.02em !important;
+  opacity: 0.9 !important;
+}
+
+/* Infobulle hover */
+.hover-name {
+  color: #e2e8f0 !important;
+  font-size: 12px !important;
+}
+
+/* Champs Texte, Email, Téléphone et Zone de texte */
+.form-textbox,
+.form-textarea {
+  background-color: #151121 !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  border-radius: 12px !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  padding: 12px 16px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  transition: all 0.25s ease !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4) !important;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+}
+
+.form-textbox::placeholder,
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* Focus avec contour violet lumineux */
+.form-textbox:focus,
+.form-textarea:focus {
+  background-color: #1a142e !important;
+  border-color: #a855f7 !important;
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+  outline: none !important;
+  color: #ffffff !important;
+}
+
+.form-textarea {
+  min-height: 120px !important;
+  resize: vertical !important;
+}
+
+/* Module Calendrier de rendez-vous */
+.appointmentFieldWrapper {
+  background: #151121 !important;
+  border: 1px solid rgba(168, 85, 247, 0.25) !important;
+  border-radius: 16px !important;
+  padding: 16px !important;
+}
+
+.appointmentCalendar,
+.appointmentSlot {
+  color: #ffffff !important;
+}
+
+.appointmentCalendar .header {
+  color: #ffffff !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+
+.appointmentCalendar .days .day {
+  color: #e2e8f0 !important;
+}
+
+.appointmentCalendar .days .day.is-selected,
+.appointmentCalendar .days .day:hover {
+  background-color: #9333ea !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+}
+
+.appointmentSlot {
+  background: #181329 !important;
+  border: 1px solid rgba(168, 85, 247, 0.3) !important;
+  color: #ffffff !important;
+  border-radius: 10px !important;
+}
+
+.appointmentSlot:hover {
+  background: #9333ea !important;
+  color: #ffffff !important;
+  border-color: #c084fc !important;
+}
+
+.appointmentSlot.is-selected {
+  background: linear-gradient(135deg, #9333ea, #c026d3) !important;
+  color: #ffffff !important;
+  border-color: #f472b6 !important;
+  box-shadow: 0 4px 15px rgba(147, 51, 234, 0.5) !important;
+}
+
+/* Bouton Envoyer la demande */
+.form-buttons-wrapper {
+  margin-top: 24px !important;
+  padding-top: 16px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.form-submit-button,
+button.submit-button,
+#input_7 {
+  background: linear-gradient(135deg, #9333ea 0%, #7c3aed 50%, #c026d3 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 9999px !important;
+  padding: 15px 42px !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.09em !important;
+  cursor: pointer !important;
+  box-shadow: 0 10px 30px -5px rgba(147, 51, 234, 0.55), 0 0 15px rgba(168, 85, 247, 0.3) !important;
+  transition: all 0.25s ease !important;
+  width: 100% !important;
+  max-width: 320px !important;
+}
+
+.form-submit-button:hover,
+button.submit-button:hover,
+#input_7:hover {
+  background: linear-gradient(135deg, #a855f7 0%, #9333ea 50%, #d946ef 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 15px 35px -5px rgba(147, 51, 234, 0.75), 0 0 25px rgba(168, 85, 247, 0.5) !important;
+}

@@ -160,7 +160,7 @@ export default function ServicesPage() {
                 {/* Pied de carte avec actions */}
                 <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/10 bg-white/[0.015] p-6 sm:p-8">
                   <Link
-                    href={`/#rendez-vous`}
+                    href="/rendez-vous"
                     className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-600 px-5 py-2.5 text-xs font-semibold text-white transition hover:from-purple-500 hover:to-fuchsia-500 sm:text-sm shadow-md shadow-purple-900/30"
                   >
                     <IconCalendar className="h-3.5 w-3.5" />
@@ -225,7 +225,7 @@ export default function ServicesPage() {
               </div>
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href="/#rendez-vous"
+                  href="/rendez-vous"
                   className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-600 px-6 py-3.5 text-sm font-semibold text-white transition hover:from-purple-500 hover:to-fuchsia-500 shadow-lg shadow-purple-900/40"
                 >
                   <IconCalendar className="h-4 w-4" />
